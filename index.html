@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aquadex - Aquarium Fish Guide</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:#38bdf8;
+}
+
+.search-box{
+    display:flex;
+    gap:10px;
+    margin:20px 0;
+}
+
+input{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    padding:12px 20px;
+    background:#38bdf8;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+.label{
+    color:#38bdf8;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>🐠 Aquadex</h1>
+
+<div class="search-box">
+<input type="text" id="fishInput" placeholder="Enter fish name">
+<button onclick="searchFish()">Search</button>
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+const fishDatabase = [
+
+{
+name:"German Blue Ram",
+scientificName:"Mikrogeophagus ramirezi",
+tankSize:"20 Gallons",
+temperature:"26-30°C",
+ph:"5.5-7.0",
+diet:"Omnivore",
+temperament:"Peaceful",
+difficulty:"Intermediate"
+},
+
+{
+name:"Angelfish",
+scientificName:"Pterophyllum scalare",
+tankSize:"30 Gallons",
+temperature:"24-30°C",
+ph:"6.0-7.5",
+diet:"Omnivore",
+temperament:"Semi Aggressive",
+difficulty:"Intermediate"
+},
+
+{
+name:"Cardinal Tetra",
+scientificName:"Paracheirodon axelrodi",
+tankSize:"15 Gallons",
+temperature:"24-29°C",
+ph:"4.5-7.0",
+diet:"Omnivore",
+temperament:"Peaceful",
+difficulty:"Beginner"
+},
+
+{
+name:"Honey Gourami",
+scientificName:"Trichogaster chuna",
+tankSize:"15 Gallons",
+temperature:"22-28°C",
+ph:"6.0-7.5",
+diet:"Omnivore",
+temperament:"Peaceful",
+difficulty:"Beginner"
+},
+
+{
+name:"Black Neon Tetra",
+scientificName:"Hyphessobrycon herbertaxelrodi",
+tankSize:"15 Gallons",
+temperature:"22-28°C",
+ph:"5.5-7.5",
+diet:"Omnivore",
+temperament:"Peaceful",
+difficulty:"Beginner"
+}
+
+];
+
+function searchFish(){
+
+const fishName = document
+.getElementById("fishInput")
+.value
+.toLowerCase();
+
+const fish = fishDatabase.find(
+f => f.name.toLowerCase() === fishName
+);
+
+const result = document.getElementById("result");
+
+if(fish){
+
+result.innerHTML = `
+<div class="card">
+<h2>${fish.name}</h2>
+
+<p><span class="label">Scientific Name:</span> ${fish.scientificName}</p>
+
+<p><span class="label">Tank Size:</span> ${fish.tankSize}</p>
+
+<p><span class="label">Temperature:</span> ${fish.temperature}</p>
+
+<p><span class="label">pH:</span> ${fish.ph}</p>
+
+<p><span class="label">Diet:</span> ${fish.diet}</p>
+
+<p><span class="label">Temperament:</span> ${fish.temperament}</p>
+
+<p><span class="label">Difficulty:</span> ${fish.difficulty}</p>
+</div>
+`;
+
+}else{
+
+result.innerHTML = `
+<div class="card">
+Fish not found in Aquadex database.
+</div>
+`;
+
+}
+
+}
+</script>
+
+</body>
+</html>
