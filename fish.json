@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Guppy",
+    "scientificName": "Poecilia reticulata",
+    "tankSize": "10 Gallons",
+    "temperature": "22-28°C",
+    "ph": "7.0-8.0",
+    "diet": "Omnivore",
+    "temperament": "Peaceful",
+    "difficulty": "Beginner"
+  },
+  {
+    "name": "Molly",
+    "scientificName": "Poecilia sphenops",
+    "tankSize": "20 Gallons",
+    "temperature": "24-28°C",
+    "ph": "7.5-8.5",
+    "diet": "Omnivore",
+    "temperament": "Peaceful",
+    "difficulty": "Beginner"
+  },
+  {
+    "name": "Platy",
+    "scientificName": "Xiphophorus maculatus",
+    "tankSize": "10 Gallons",
+    "temperature": "20-26°C",
+    "ph": "7.0-8.2",
+    "diet": "Omnivore",
+    "temperament": "Peaceful",
+    "difficulty": "Beginner"
+  },
+  {
+    "name": "Swordtail",
+    "scientificName": "Xiphophorus hellerii",
+    "tankSize": "20 Gallons",
+    "temperature": "22-28°C",
+    "ph": "7.0-8.4",
+    "diet": "Omnivore",
+    "temperament": "Peaceful",
+    "difficulty": "Beginner"
+  },
+  {
+    "name": "Zebra Danio",
+    "scientificName": "Danio rerio",
+    "tankSize": "15 Gallons",
+    "temperature": "18-26°C",
+    "ph": "6.5-7.5",
+    "diet": "Omnivore",
+    "temperament": "Peaceful",
+    "difficulty": "Beginner"
+  }
+]
